@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="container" class="relative  w-full max-h-screen">
+        <div id="disply" class="w-full h-15 flex justify-end p-5">
+            <button class="p-5 rounded-md text-white bg-red-500">Add Iytems</button>
+            <!-- Listing -->
+        </div>
+        <div id="display">
+            <!-- Output -->
+        </div>
+        <form id="form1" class="absolute top-15 right-0 w-80 rounded-sm border-2 border-slate-200">
+            <div class="w-full p-0">
+                <label for="photo" class="my-3">Product photo</label>
+                <input type="file" name="photo" class="w-full rounded-md p-5 border-2 border-blue-400" id="photo" accept="image/jpeg image/png image/jpg"/>
+            </div>
+            <div class="w-full py-2">
+                <label for="name" class="my-3">Name</label>
+                <input type="text" name="name" class="w-full rounded-md p-5 border-2 border-blue-400" />
+            </div>
+            <div class="w-full py-2">
+                <label for="name" class="my-3">Description</label>
+                <input type="text" name="desc" class="w-full rounded-md p-5 border-2 border-blue-400" />
+            </div>
+            <div class="w-full py-2">
+                <label for="price" class="my-3">Price</label>
+                <input type="text" name="price" class="w-full rounded-md p-5 border-2 border-blue-400" />
+            </div>
+            
+            <div class="w-full py-2">
+                <input id="btn" type="submit" name="submit" value="Add Product" class="w-full rounded-md p-5 border-2 bg-blue-500 text-white"/>
+            </div>
+        </form>
+    </div>
+            <!-- Details -->
+            <!-- Items added to cart -->
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

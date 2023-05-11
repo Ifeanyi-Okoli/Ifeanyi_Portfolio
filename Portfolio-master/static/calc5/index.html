@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }/*
+    .container{
+        max-width: 400px;
+        margin: 10vh auto 0 auto;
+        box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+    }
+    #display{
+        text-align: right;
+        height: 70px;
+        line-height: 70px;
+        padding: 16px 8px;
+        font-size: 25px;
+    } */
+/*
+    .buttons{
+        display: grid;
+        border-bottom: 1px solid #999;
+        border-left: 1px solid #999;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+*/
+    .buttons > div {
+        border-top: 1px solid #999;
+        border-right: 1px solid #999;
+    }
+
+    button{
+        border: 0.5px solid #999;
+        line-height: 100px;
+        text-align: center;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    #equal{
+        background-color: #5555ff;
+        color:beige
+    }
+    .button:hover{
+        background-color: #323330;
+        color: white;
+        transition: 0.5s ease-in-out;
+    }
+    </style>
+</head>
+<body class="bg-purple-800 bg-gradient-to-br from-blue-300 bg-opacity-25 grid grid-cols-1 items-center place-content-center">
+    <div class= "text-5xl text-black text-left font-bold mb-14">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;IFEANYI OKOLI'S <br> DIGITAL CALCULATOR</p>
+    </div>
+    
+    <section class="max-w-lg rounded overflow-hdden shadow-2xl bg-pink-700 bg-opacity-75 bg-gradient-to-tr from-gray-800 flex justify-center">
+
+        <div class="max-w-md mt-10 mx-auto shadow-2xl">
+            <div id="display" class="text-right h-16 py-4 px-2 text-3xl text-white font-bold leading-10"></div>
+            <div class="buttons grid grid-cols-4 border-solid border-2 border-gray-500">
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">C</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">/</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">*</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">&larr;</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">7</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">8</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">9</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">-</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">4</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">5</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">6</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">+</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">1</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">2</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">3</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">0</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">.</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">(</div>
+                <div class="button flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:border-transparent rounded text-white border-2 text-2xl hover:bg-green-500 rounded">)</div>
+                <div id="equal" class="button bg-purple-700 text-gray-100  flex w-12 h-12 py-2 justify-center items-center m-1 font-bold px-2 border hover:bg-green-300 border-yellow-800 ease-in duration-150">=</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./main.js"></script>
+</body>
+</html>
